@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>filter</title>
+</head>
+<body>
+    <h3>
+        value={{ value }},value|add:"2"= {{ value|add:"2" }} <br /> 
+        value|stringformat:"E"={{ value|stringformat:"E" }} <br />
+        list1={{ list1 }},list1|length= {{ list1|length }} <br />
+    
+        {% if pw == "芝麻開門" %} <!-- 字串比對 -->
+            密碼正確 <br />
+        {% else %}
+            密碼錯誤 <br />  
+        {% endif %}  
+        
+        value2={{ value2 }}  ,value2|yesno:"是,否,取消"={{ value2|yesno:"是,否,取消"}} <br />           
+        html={{ html }}  ,html|safe= {{ html|safe }} 
+    </h3>    
+</body>
+</html>
