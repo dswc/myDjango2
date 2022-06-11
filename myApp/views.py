@@ -45,10 +45,12 @@ def show(request):
     persons=[person1, person2, person3]
     
     # TODO 9*9 multiplication table
+    row_list = []
     for i in range(1, 10):
+        col_list = []
         for j in range(1, 10):
-            print(f'{j} x {i} = {j*i}', end='\t')
-        print('')
+            col_list.append(f'{j} x {i} = {j*i}')
+        row_list.append(col_list)
     
     return render(request, "show.html", locals())
 

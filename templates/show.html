@@ -12,9 +12,10 @@
     
 </head>
 <body>
-    <h3>   
-    {% for person in persons%}
-       <h2>第 {{forloop.counter}} 位員工</h2>
+    <h1>總共有多少員工 {{persons|length}}</h1>
+    <h3>
+    {% for person in persons reversed%}
+       <h2>第 {{forloop.counter|add:"2"}} 位員工</h2>
        <ul>
            <li>姓名：{{person.name}}</li>
            <li>手機：{{person.phone}}</li>
@@ -26,9 +27,13 @@
     </h3>
     
     <table style="width:100%">
+    {% for r in row_list %}
         <tr>
-            <td>  </td>
+        {% for c in r %}
+            <td> {{c}} </td>
+        {% endfor %} 
         </tr>
+    {% endfor %}
     </table>
 </body>
 </html>
