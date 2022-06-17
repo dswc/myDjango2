@@ -19,7 +19,7 @@ from myApp.views import sayhello
 from myApp.views import hello2
 from myApp.views import hello4
 from myApp.views import test_dict
-from myApp.views import dice, dice2, dice3, show
+from myApp.views import dice, dice2, dice3, show, listone, listall
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +30,6 @@ urlpatterns = [
     path('dice2/', dice2),
     path('dice3/', dice3),
     path('show/', show),
+    path('listone/', listone),
+    path('listall/', listall),
 ]
